@@ -1,0 +1,132 @@
+baseURL = "https://diatomologiabrasileira.com"
+title = "Rede Brasileira de Diatomólogos"
+author = "Rede Brasileira de Diatomólogos"
+languageCode = "en"
+DefaultContentLanguage = "en"
+enableInlineShortcodes = true
+theme = "tella"
+enableRobotsTXT = true
+
+# Please enable this feature if the site is available in Japanese, Chinese or Korean.
+#hasCJKLanguage = true
+
+# If you're using Google Analytics, you can enable this feature.
+#googleAnalytics = "UA-12345678-1"
+
+# Disqus Comment System
+#disqusShortname = ""
+
+[params]
+
+  showBlog = false #aqui é para mostrar a seção blog na homepage ou nao
+  showStrip = false
+  mainSections = ['blog']
+
+  googleFonts = true
+
+  [params.logo]
+    main = "img/logo/logo_final.svg"
+    alt = "Diatom Logo"
+
+    # The size parameter is the class name of tailwindcss
+    # https://tailwindcss.com/
+    size = "h-14"
+
+  [params.site]
+    name = "Rede Brasileira de Diatomólogos"
+
+  [params.icon]
+    #If you want to use FontAwesome, set this parameter to true.
+    fontawesome = true
+
+  [params.homepage_meta_tags]
+    meta_description = "A Hugo Theme for OSSProject, Companies, Organization..."
+    meta_og_title = "Tella"
+    meta_og_type = "website"
+    meta_og_url = "https://tella.pages.dev"
+    meta_og_image = "https://raw.githubusercontent.com/opera7133/tella/master/images/tn.png"
+    meta_og_description = "A Hugo Theme for OSSProject, Companies, Organization..."
+    meta_twitter_card = "summary_large_image"
+    meta_twitter_site = "@username"
+    meta_twitter_creator = "@username"
+
+[menu]
+
+  [[menu.main]]
+    identifier = "about"
+    name = "Sobre Nós"
+    url = "/about/"
+    weight = 1
+  
+  [[menu.main]]
+    parent = "about"
+    name = "O que são diatomáceas?"
+    url = "/about/#oqueehdiatom/"
+    weight = 1  
+    
+   [[menu.main]]
+    parent = "about"
+    name = "O que é Diatomologia"
+    url = "/about/#oqueeh/"
+    weight = 2
+
+  [[menu.main]]
+    parent = "about"
+    name = "A Rede Brasileira de Diatomólogos"
+    url = "/about/#historia/"
+    weight = 3
+    
+  [[menu.main]]
+    parent = "about"
+    name = "Missão, Visão e Valores"
+    url = "/about/#missão/"
+    weight = 4
+    
+    
+  [[menu.main]]
+    parent = "about"
+    name = "Diretoria Atual"
+    url = "/about/#diretoriaatual/"
+    weight = 5
+    
+  [[menu.main]]
+    identifier = "events"
+    name = "Eventos"
+    url = "/events/"
+    weight = 2
+    
+  [[menu.main]]
+    parent = "events"
+    name = "Próximos Eventos"
+    url = "/events/#proxevent/"
+    weight = 1  
+    
+   [[menu.main]]
+    parent = "events"
+    name = "Eventos Anteriores"
+    url = "/events/#antevent/" 
+    weight = 2
+
+  [[menu.main]]
+    identifier = "associados"
+    name = "Associados"
+    url = "/associados/"
+    weight = 3
+    
+#  [[menu.main]]
+#    identifier = "novidades"
+#    name = "Novidades"
+#    url = "/novidades/"
+#    weight = 4  
+    
+
+  [[menu.main]]
+    identifier = "contact"
+    name = "Contato"
+    url = "/contact/"
+    weight = 6
+    
+
+
+
+
