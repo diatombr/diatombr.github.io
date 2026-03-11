@@ -19,6 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       HUGO_VERSION: 0.145.0
+      NODE_VERSION: 20
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -26,14 +27,25 @@ jobs:
           fetch-depth: 0
           submodules: recursive
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Install PostCSS
+        run: |
+          npm install -g postcss postcss-cli autoprefixer
+          # O tema Tella pode precisar de dependências adicionais
+          npm install -g tailwindcss
+
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
           hugo-version: ${{ env.HUGO_VERSION }}
-          extended: false  # Mudei para false para evitar PostCSS
+          extended: true  # Importante: precisa ser true para o Tella
 
       - name: Build with Hugo
-        run: hugo --minify --gc
+        run: hugo --minify --gc --environment production
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
