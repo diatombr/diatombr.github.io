@@ -127,6 +127,7 @@ enableRobotsTXT = true
     weight = 6
 
 
-
+[build]
+  useResourceCacheWhen = 'always'
 
 
