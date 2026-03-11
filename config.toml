@@ -1,4 +1,4 @@
-baseURL = "https://diatomologiabrasileira.com"
+baseURL = "https://diatombr.github.io"
 title = "Rede Brasileira de Diatomólogos"
 author = "Rede Brasileira de Diatomólogos"
 languageCode = "en"
@@ -57,13 +57,13 @@ enableRobotsTXT = true
     name = "Sobre Nós"
     url = "/about/"
     weight = 1
-  
+
   [[menu.main]]
     parent = "about"
     name = "O que são diatomáceas?"
     url = "/about/#oqueehdiatom/"
-    weight = 1  
-    
+    weight = 1
+
    [[menu.main]]
     parent = "about"
     name = "O que é Diatomologia"
@@ -75,36 +75,36 @@ enableRobotsTXT = true
     name = "A Rede Brasileira de Diatomólogos"
     url = "/about/#historia/"
     weight = 3
-    
+
   [[menu.main]]
     parent = "about"
     name = "Missão, Visão e Valores"
     url = "/about/#missão/"
     weight = 4
-    
-    
+
+
   [[menu.main]]
     parent = "about"
     name = "Diretoria Atual"
     url = "/about/#diretoriaatual/"
     weight = 5
-    
+
   [[menu.main]]
     identifier = "events"
     name = "Eventos"
     url = "/events/"
     weight = 2
-    
+
   [[menu.main]]
     parent = "events"
     name = "Próximos Eventos"
     url = "/events/#proxevent/"
-    weight = 1  
-    
+    weight = 1
+
    [[menu.main]]
     parent = "events"
     name = "Eventos Anteriores"
-    url = "/events/#antevent/" 
+    url = "/events/#antevent/"
     weight = 2
 
   [[menu.main]]
@@ -112,20 +112,20 @@ enableRobotsTXT = true
     name = "Associados"
     url = "/associados/"
     weight = 3
-    
+
 #  [[menu.main]]
 #    identifier = "novidades"
 #    name = "Novidades"
 #    url = "/novidades/"
-#    weight = 4  
-    
+#    weight = 4
+
 
   [[menu.main]]
     identifier = "contact"
     name = "Contato"
     url = "/contact/"
     weight = 6
-    
+
 
 
 
