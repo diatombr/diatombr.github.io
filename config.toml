@@ -1,8 +1,8 @@
 baseURL = "https://diatombr.github.io/"
 title = "Rede Brasileira de Diatomólogos"
 author = "Rede Brasileira de Diatomólogos"
-languageCode = "en"
-DefaultContentLanguage = "en"
+languageCode = "pt-BR"  # Mudei para português do Brasil
+DefaultContentLanguage = "pt"  # Mudei para português
 enableInlineShortcodes = true
 theme = "tella"
 enableRobotsTXT = true
@@ -17,41 +17,40 @@ enableRobotsTXT = true
 #disqusShortname = ""
 
 [params]
-
-  showBlog = false #aqui é para mostrar a seção blog na homepage ou nao
+  # Configurações principais
+  showBlog = false
   showStrip = false
   mainSections = ['blog']
-
   googleFonts = true
+  disable_assets = true  # Desabilita processamento CSS avançado
 
+  # Logo
   [params.logo]
     main = "img/logo/logo_final.svg"
     alt = "Diatom Logo"
-
-    # The size parameter is the class name of tailwindcss
-    # https://tailwindcss.com/
     size = "h-14"
 
+  # Site
   [params.site]
     name = "Rede Brasileira de Diatomólogos"
 
+  # Icon
   [params.icon]
-    #If you want to use FontAwesome, set this parameter to true.
     fontawesome = true
 
+  # Homepage Meta Tags
   [params.homepage_meta_tags]
-    meta_description = "A Hugo Theme for OSSProject, Companies, Organization..."
-    meta_og_title = "Tella"
+    meta_description = "Rede Brasileira de Diatomólogos - Comunidade de pesquisadores e estudiosos de diatomáceas no Brasil"
+    meta_og_title = "Rede Brasileira de Diatomólogos"
     meta_og_type = "website"
-    meta_og_url = "https://tella.pages.dev"
+    meta_og_url = "https://diatombr.github.io/"
     meta_og_image = "https://raw.githubusercontent.com/opera7133/tella/master/images/tn.png"
-    meta_og_description = "A Hugo Theme for OSSProject, Companies, Organization..."
+    meta_og_description = "Rede Brasileira de Diatomólogos - Comunidade de pesquisadores e estudiosos de diatomáceas no Brasil"
     meta_twitter_card = "summary_large_image"
-    meta_twitter_site = "@username"
-    meta_twitter_creator = "@username"
+    meta_twitter_site = "@diatombr"
+    meta_twitter_creator = "@diatombr"
 
 [menu]
-
   [[menu.main]]
     identifier = "about"
     name = "Sobre Nós"
@@ -64,7 +63,7 @@ enableRobotsTXT = true
     url = "/about/#oqueehdiatom/"
     weight = 1
 
-   [[menu.main]]
+  [[menu.main]]
     parent = "about"
     name = "O que é Diatomologia"
     url = "/about/#oqueeh/"
@@ -81,7 +80,6 @@ enableRobotsTXT = true
     name = "Missão, Visão e Valores"
     url = "/about/#missão/"
     weight = 4
-
 
   [[menu.main]]
     parent = "about"
@@ -101,7 +99,7 @@ enableRobotsTXT = true
     url = "/events/#proxevent/"
     weight = 1
 
-   [[menu.main]]
+  [[menu.main]]
     parent = "events"
     name = "Eventos Anteriores"
     url = "/events/#antevent/"
@@ -113,12 +111,11 @@ enableRobotsTXT = true
     url = "/associados/"
     weight = 3
 
-#  [[menu.main]]
-#    identifier = "novidades"
-#    name = "Novidades"
-#    url = "/novidades/"
-#    weight = 4
-
+  # [[menu.main]]
+  #   identifier = "novidades"
+  #   name = "Novidades"
+  #   url = "/novidades/"
+  #   weight = 4
 
   [[menu.main]]
     identifier = "contact"
@@ -126,17 +123,10 @@ enableRobotsTXT = true
     url = "/contact/"
     weight = 6
 
-
-[params]
-  # Desabilita processamento CSS avançado
-  disable_assets = true
-
 [build]
   writeStats = false
 
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
-      unsafe = true  # Isso também resolve os warnings de HTML
-
-
+      unsafe = true
