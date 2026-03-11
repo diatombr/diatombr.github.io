@@ -127,7 +127,16 @@ enableRobotsTXT = true
     weight = 6
 
 
+[params]
+  # Desabilita processamento CSS avançado
+  disable_assets = true
+
 [build]
-  useResourceCacheWhen = 'always'
+  writeStats = false
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true  # Isso também resolve os warnings de HTML
 
 
