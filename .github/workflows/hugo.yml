@@ -23,8 +23,10 @@ jobs:
         with:
           node-version: 20
 
-      - name: Install npm dependencies
-        run: npm install
+      - name: Install dependencies
+        run: |
+          npm install
+          npm install postcss postcss-cli autoprefixer
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
@@ -47,5 +49,5 @@ jobs:
       name: github-pages
 
     steps:
-      - name: Deploy to GitHub Pages
+      - name: Deploy
         uses: actions/deploy-pages@v4
