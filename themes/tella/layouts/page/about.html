@@ -1,0 +1,138 @@
+{{ define "meta_tags" }}
+<meta property="og:site_name" content="{{ .Site.Title }}" />
+<meta property="og:title" content="{{ .Title }} | {{ .Site.Title }}" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="{{ .Permalink }}" />
+<meta name="twitter:card" content="summary_large_image">
+<meta property="twitter:title" content="{{ .Title }}">
+
+{{ if .Params.image }}
+  {{ with .Params.image }}<meta property="og:image" content="{{ . | absURL }}">{{ end }}
+{{ else }}
+  <meta property="og:image" content="{{ .Site.Params.homepage_meta_tags.meta_og_image | absURL }}">
+{{ end }}
+
+{{- if .Description }}
+<meta name="description" content="{{ .Description }}" />
+<meta property="og:description" content="{{ .Description }}" />
+<meta property="twitter:description" content="{{ .Description }}" />
+{{- else if .Summary }}
+<meta name="description" content="{{ .Summary }}" />
+<meta property="og:description" content="{{ .Summary }}" />
+<meta property="twitter:description" content="{{ .Summary }}" />
+{{- else if .Site.Params.description }}
+<meta name="description" content="{{ .Site.Params.description }}" />
+<meta property="og:description" content="{{ .Site.Params.description }}" />
+<meta property="twitter:description" content="{{ .Site.Params.description }}" />
+{{- end }}
+{{ end }}
+
+{{ define "main" }}
+<div class="mx-auto my-10 max-w-6xl">
+  <div class="mx-3 px-2">
+    <h1 class="title text-5xl mb-10">{{.Title}}</h1>
+    
+    <div class="content prose md:prose-lg lg:prose-xl max-w-none custom-about-content">
+      {{.Content}}
+    </div>
+  </div>
+</div>
+
+<style>
+  /* 1. RESET DE MARGENS PARA ALINHAMENTO NO TOPO */
+  .custom-about-content h2:first-of-type,
+  .about-text-column h2,
+  .about-image-column img {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+
+  /* 2. ESTILO DA BARRA LATERAL (Subtítulo) */
+  .about-text-column h2 {
+    display: block !important;
+    border-left: 6px solid #585432 !important; /* Sua cor definida */
+    padding-left: 20px !important;
+    margin-bottom: 1.5rem !important;
+    text-align: left !important;
+    line-height: 1.1 !important; /* Ajuste para alinhar o topo da letra com a imagem */
+    border-top: none !important;
+    border-right: none !important;
+    border-bottom: none !important;
+  }
+
+  /* 3. LAYOUT DE COLUNAS EM DESKTOP */
+  @media (min-width: 768px) {
+    .about-split-section {
+      display: grid !important;
+      grid-template-columns: 3fr 1fr !important; /* 75% Texto | 25% Imagem */
+      gap: 50px;
+      align-items: start !important; /* Alinha ambos no topo absoluto */
+      margin: 3rem 0;
+      width: 100%;
+    }
+
+    .about-text-column p {
+      text-align: justify !important;
+      padding-left: 26px !important; /* 6px da barra + 20px de padding do h2 */
+      margin: 0 !important;
+    }
+
+    .about-image-column img {
+      width: 100% !important;
+      height: auto !important;
+      display: block !important;
+      border-radius: 15px;
+    }
+  }
+</style>
+
+
+
+<script>
+  (function() {
+    const organizeLayout = function() {
+      const content = document.querySelector('.custom-about-content');
+      if (!content) return;
+
+      const h2 = content.querySelector('h2:first-of-type');
+      const img = content.querySelector('img');
+
+      if (h2 && img) {
+        const wrapper = document.createElement('div');
+        wrapper.className = 'about-split-section';
+
+        const textCol = document.createElement('div');
+        textCol.className = 'about-text-column';
+        
+        const imgCol = document.createElement('div');
+        imgCol.className = 'about-image-column';
+
+        // Pega o parágrafo que está entre o H2 e a imagem
+        const p = h2.nextElementSibling;
+
+        // MOVE os elementos para dentro das colunas (preserva estilos)
+        textCol.appendChild(h2);
+        if (p && p.tagName === 'P' && !p.querySelector('img')) {
+          textCol.appendChild(p);
+        }
+
+        // Move a imagem e limpa o container original (geralmente um <p>)
+        const imgParent = img.parentElement;
+        imgCol.appendChild(img);
+        if (imgParent && imgParent.tagName === 'P' && imgParent.innerText.trim() === "") {
+          imgParent.remove();
+        }
+
+        wrapper.appendChild(textCol);
+        wrapper.appendChild(imgCol);
+        
+        // Insere o layout novo no início do conteúdo
+        content.prepend(wrapper);
+      }
+    };
+
+    // 'load' garante que o navegador já sabe o tamanho da imagem para alinhar
+    window.addEventListener('load', organizeLayout);
+  })();
+</script>
+{{ end }}

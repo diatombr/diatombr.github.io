@@ -1,0 +1,204 @@
+{{ define "main" }}
+
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+{{ $bgImage := .Params.image | default "/images/default-bg.jpg" }}
+
+<style>
+
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
+
+body{
+overflow-x:hidden;
+font-family:'Nunito','Open Sans',Helvetica,Arial,sans-serif;
+}
+
+/* CORES */
+
+:root{
+--abl-primary:#0080ff;
+--abl-accent:#86cc58;
+--abl-dark:#05333d;
+--abl-bg-white:#ffffff;
+--abl-bg-gray:#f6f8fb;
+}
+  /* =========================
+     HERO
+  ========================= */
+  .hero-container {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background-image: url('{{ $bgImage | absURL }}');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: -1;
+  }
+
+  /* =========================
+     CONTEÚDO
+  ========================= */
+  .content-box {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    padding-left: clamp(1.5rem, 6vw, 8rem);
+    padding-right: clamp(1.5rem, 4vw, 4rem);
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+
+  /* =========================
+     FORMULÁRIO (ISOLADO)
+  ========================= */
+  .contact-form {
+    max-width: 520px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    height: 56px;
+    padding: 0 1rem;
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.25;
+    border: 1.5px solid #cccccc;
+    border-radius: 16px;
+    background-color: linear-gradient(180deg,#f7fbff,#eef4f9);
+    box-sizing: border-box;
+
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+
+  .contact-form textarea {
+    height: auto;
+    padding: 1rem;
+    resize: vertical;
+  }
+
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    outline: none;
+    background-color: #ffffff;
+    border-color: #eef4f9;
+    border-radius:16px;
+    box-shadow:0 12px 35px rgba(0,0,0,.08);
+  }
+
+  .contact-form .field {
+    margin-bottom: 1rem;
+  }
+
+  .contact-form .submit-btn {
+    margin-top: 0.5rem;
+    padding: 0.6rem 1rem;
+    background-color: #0f4c5c;
+    color: white;
+    cursor: pointer;
+    border-radius:16px;
+    box-shadow:0 12px 35px rgba(0,0,0,.08);
+  }
+  
+  /* =========================
+     Texto  (ISOLADO)
+  ========================= */
+  .intro-text{
+    margin-top:0px;
+    margin-bottom:10px;
+    text-align:left;
+    white-space:pre-line;
+    font-size:1.2rem;
+    line-height:1.5;
+    color:#444;
+}
+
+/* =========================
+     titulo (ISOLADO)
+  ========================= */
+  .page-title{
+    font-family:'Nunito',sans-serif;
+    font-size:2.8rem;
+    font-weight:700;
+    color:var(--abl-dark);
+    margin-bottom:1.5rem;
+    line-height:1.2;
+    position:relative;
+    padding-left:20px;
+}
+
+  .page-title::before{
+    content:'';
+    position:absolute;
+    left:0;
+    top:0;
+    bottom:0;
+    width:6px;
+    background:linear-gradient(to bottom,var(--abl-primary),var(--abl-accent));
+    border-radius:3px;
+}
+
+</style>
+
+<div class="hero-container">
+  <div class="hero-bg"></div>
+
+  <div class="content-box">
+
+    <h1 class="page-title">
+      {{ .Title }}
+    </h1>
+
+    <div class="intro-text max-w-lg text-gray-700 text-lg">
+      {{ .Params.intro_text }}
+    </div>
+
+    <form
+      name="contact"
+      action="https://getform.io/"
+      method="POST"
+      class="contact-form"
+    >
+
+      <div class="field">
+        <input type="text" name="name" placeholder="Nome" required>
+      </div>
+
+      <div class="field">
+        <input type="email" name="mail" placeholder="Email" required>
+      </div>
+
+      <div class="field">
+        <input type="text" name="title" placeholder="Título" required>
+      </div>
+
+      <div class="field">
+        <textarea name="message" rows="5" placeholder="Mensagem" required></textarea>
+      </div>
+
+      <input type="submit" value="Enviar" class="submit-btn">
+
+    </form>
+
+    <div class="mt-8 max-w-lg text-gray-600 text-sm">
+      {{ .Params.footer_text }}
+    </div>
+
+  </div>
+</div>
+{{ end }}

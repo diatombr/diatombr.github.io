@@ -1,0 +1,260 @@
+{{ define "main" }}
+<div class="mx-auto my-10 max-w-6xl">
+  <div class="mx-3 px-2">
+    <h1 class="title text-5xl mb-10">{{ .Title }}</h1>
+
+    <div class="content prose md:prose-lg lg:prose-xl max-w-none custom-about-content">
+      {{ .Content }}
+    </div>
+  </div>
+</div>
+
+<style>
+
+/* VARIÁVEIS */
+:root{
+  --abl-primary:#0080ff;
+  --abl-accent:#86cc58;
+  --abl-dark:#05333d;
+  --abl-bg-white:#ffffff;
+  --abl-bg-gray:#f8f9fa;
+}
+
+/* BASE */
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+body{
+  overflow-x:hidden;
+  font-family:'Nunito','Open Sans',Helvetica,Arial,sans-serif;
+}
+
+/* SEÇÕES */
+.section-wrapper{
+  width:100vw;
+  position:relative;
+  left:50%;
+  margin-left:-50vw;
+  padding:80px 0;
+  display:flex;
+  justify-content:center;
+}
+
+.section-wrapper:nth-of-type(odd){
+  background:var(--abl-bg-white);
+}
+
+.section-wrapper:nth-of-type(even){
+  background:var(--abl-bg-gray);
+}
+
+.section-inner{
+  width:100%;
+  max-width:1000px;
+  margin:auto;
+  padding:0 40px;
+  display:flex;
+  flex-direction:column;
+  gap:40px;
+}
+
+/* TÍTULO */
+.section-content h2{
+  font-size:2.5rem;
+  font-weight:700;
+  color:var(--abl-dark);
+  text-align:center;
+  margin-bottom:25px;
+  position:relative;
+  padding-bottom:15px;
+}
+
+.section-content h2::after{
+  content:'';
+  position:absolute;
+  left:50%;
+  transform:translateX(-50%);
+  bottom:0;
+  width:110px;
+  height:6px;
+  border-radius:3px;
+  background:linear-gradient(to right,var(--abl-primary),var(--abl-accent));
+}
+
+/* TEXTO NORMAL */
+.section-content p{
+  font-size:1.125rem;
+  line-height:1.8;
+  color:#444;
+  text-align:justify;
+  margin-bottom:1.5rem;
+}
+
+/* GRID DE CARDS */
+.section-columns{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:40px;
+  margin-top:20px;
+}
+
+/* CARD */
+.section-card{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+}
+
+/* IMAGEM */
+.section-card img{
+  width:50%;
+  height:auto;
+  object-fit:cover;
+  border-radius:12px; /* não redonda */
+  box-shadow:0 10px 30px rgba(0,0,0,0.1);
+  transition:transform .3s ease;
+  cursor:pointer;
+}
+
+.section-card img:hover{
+  transform:translateY(-5px);
+}
+
+/* TEXTO DO CARD */
+.section-card p{
+  margin-top:12px;
+  font-size:1rem;
+  line-height:1.6;
+  text-align:center;
+  color:#444;
+}
+
+/* RESPONSIVO */
+@media(max-width:900px){
+  .section-inner{
+    padding:0 20px;
+  }
+  .section-content h2{
+    font-size:2rem;
+  }
+  .section-columns{
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  }
+}
+
+@media(max-width:600px){
+  .section-content h2{
+    font-size:1.7rem;
+  }
+  .section-columns{
+    grid-template-columns:1fr;
+  }
+  .section-card img{
+    max-width:100%;
+    height:auto;
+  }
+}
+
+/* ANIMAÇÃO */
+@keyframes fadeInUp{
+  from{
+    opacity:0;
+    transform:translateY(30px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+.section-wrapper{
+  animation:fadeInUp .6s ease-out;
+}
+
+</style>
+
+<script>
+(function(){
+  const content = document.querySelector(".custom-about-content");
+  if(!content) return;
+
+  const h2s = content.querySelectorAll("h2");
+
+  h2s.forEach(h2 => {
+
+    let elements = [];
+    let el = h2.nextElementSibling;
+
+    while(el && el.tagName !== "H2"){
+      elements.push(el);
+      el = el.nextElementSibling;
+    }
+
+    /* WRAPPER */
+    const wrapper = document.createElement("div");
+    wrapper.className = "section-wrapper";
+
+    const inner = document.createElement("div");
+    inner.className = "section-inner";
+
+    const contentDiv = document.createElement("div");
+    contentDiv.className = "section-content";
+
+    wrapper.appendChild(inner);
+    inner.appendChild(contentDiv);
+
+    h2.parentNode.insertBefore(wrapper,h2);
+    contentDiv.appendChild(h2);
+
+    /* GRID DE CARDS */
+    let grid = document.createElement("div");
+    grid.className = "section-columns";
+
+    let currentCard = null;
+
+    elements.forEach(e => {
+
+      // Se o elemento tiver imagem
+      const img = e.querySelector ? e.querySelector("img") : null;
+      if(img){
+        currentCard = document.createElement("div");
+        currentCard.className = "section-card";
+
+        // Se tiver data-link no img
+        const link = img.getAttribute("data-link");
+        if(link){
+          const a = document.createElement("a");
+          a.href = link;
+          a.target = "_blank";
+          a.appendChild(img.cloneNode());
+          currentCard.appendChild(a);
+        } else {
+          currentCard.appendChild(img);
+        }
+
+        grid.appendChild(currentCard);
+        e.remove();
+      }
+      // Texto do card
+      else if(currentCard && e.tagName === "P"){
+        currentCard.appendChild(e);
+      }
+      // Texto normal da seção
+      else{
+        contentDiv.appendChild(e);
+      }
+
+    });
+
+    if(grid.children.length > 0){
+      inner.appendChild(grid);
+    }
+
+  });
+})();
+</script>
+{{ end }}

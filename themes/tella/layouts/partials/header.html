@@ -1,0 +1,114 @@
+<header class="bg-rdb-blue-petroleo">
+  <div id="overlay">
+    <ul class="text-center list-none text-white text-3xl">
+      {{ range .Site.Menus.main }}
+      <li class="p-2">
+        <a href="{{ .URL | safeURL }}"><span>{{ .Name }}</span></a>
+      </li>
+      {{ end }}
+    </ul>
+  </div>
+
+  <nav class="max-w-7xl mx-auto flex items-center justify-between flex-wrap p-8 relative z-[50]">
+    
+    <div class="flex items-center flex-shrink-0">
+      <a href="{{ .Site.BaseURL | relURL }}" class="block">
+        <img alt="{{ .Site.Params.logo.alt }}" 
+             src="{{ .Site.Params.logo.main | relURL }}" 
+             class="{{ .Site.Params.logo.size }} object-contain brightness-0 invert" 
+             style="display: block; max-height: 60px; width: auto;">
+      </a>
+    </div>
+
+    <div class="block lg:hidden">
+      <div id="hamburgerbtn" class="flex cursor-pointer items-center w-14 h-10 py-2 rounded mopen">
+        <span class="top bg-white"></span>
+        <span class="middle bg-white"></span>
+        <span class="bottom bg-white"></span>
+      </div>
+    </div>
+
+    <div class="hidden w-full block flex-grow lg:flex lg:items-center lg:w-auto" id="mobileMenu">
+      <div class="text-lg lg:flex-grow"></div>
+      <div class="text-lg flex">
+        {{ range .Site.Menus.main }}
+          {{ if .HasChildren }}
+            <div class="relative group mt-4 lg:inline-block lg:mt-0 mr-8">
+              <a href="{{ .URL | safeURL }}" class="nav-link duration-200 text-white flex items-center cursor-pointer pb-6">
+                {{ .Name }}
+                <svg class="ml-2 inline-block arrow-icon" style="width: 15px; height: 15px;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </a>
+              <div class="absolute hidden group-hover:block bg-white shadow-xl rounded-md mt-4 py-2 w-48 z-[9999] border border-gray-100 dropdown-box">
+                {{ range .Children }}
+                <a href="{{ .URL | safeURL }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-black">
+                  {{ .Name }}
+                </a>
+                {{ end }}
+              </div>
+            </div>
+          {{ else }}
+            <a href="{{ .URL | safeURL }}" class="nav-link duration-200 block mt-4 lg:inline-block lg:mt-0 text-white mr-8 pb-6">
+              {{ .Name }}
+            </a>
+          {{ end }}
+        {{ end }}
+      </div>
+    </div>
+  </nav>
+</header>
+
+<style>
+  /* 1. Efeito da Linha de Destaque Branca */
+  .nav-link {
+    position: relative;
+    text-decoration: none !important;
+  }
+
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    display: block;
+    background: #ffffff;
+    transition: width 0.3s ease;
+    bottom: 1px;
+    right: 0;
+  }
+
+  .group:hover .nav-link::after,
+  .nav-link:hover::after {
+    width: 100%;
+    left: 0;
+  }
+
+  /* 2. Controle da Cascata */
+  .group:hover .dropdown-box {
+    display: block !important;
+  }
+
+  .dropdown-box {
+    z-index: 9999 !important;
+  }
+
+  .arrow-icon {
+    transition: transform 0.3s ease;
+  }
+
+  .group:hover .arrow-icon {
+    transform: rotate(180deg);
+  }
+
+  /* 3. Área de Segurança para o Mouse */
+  .dropdown-box::before {
+    content: "";
+    position: absolute;
+    top: -30px;
+    left: 0;
+    width: 100%;
+    height: 35px;
+    display: block;
+  }
+</style>
