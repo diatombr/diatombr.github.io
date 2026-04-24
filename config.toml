@@ -16,6 +16,10 @@ enableRobotsTXT = true
 # Disqus Comment System
 #disqusShortname = ""
 
+[markup.goldmark.parser.attribute]
+  block = true
+  title = true
+
 [params]
   # Configurações principais
   showBlog = false
@@ -106,9 +110,9 @@ enableRobotsTXT = true
     weight = 2
 
   [[menu.main]]
-    identifier = "associados"
-    name = "Associados"
-    url = "/associados/"
+    identifier = "Membros"
+    name = "Membros"
+    url = "/membros/"
     weight = 3
 
   # [[menu.main]]

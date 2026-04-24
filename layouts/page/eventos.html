@@ -114,7 +114,7 @@ body{
   width:50%;
   height:auto;
   object-fit:cover;
-  border-radius:12px; /* não redonda */
+  border-radius:12px;
   box-shadow:0 10px 30px rgba(0,0,0,0.1);
   transition:transform .3s ease;
   cursor:pointer;
@@ -210,7 +210,7 @@ body{
     h2.parentNode.insertBefore(wrapper,h2);
     contentDiv.appendChild(h2);
 
-    /* GRID DE CARDS */
+    /* GRID */
     let grid = document.createElement("div");
     grid.className = "section-columns";
 
@@ -218,32 +218,42 @@ body{
 
     elements.forEach(e => {
 
-      // Se o elemento tiver imagem
       const img = e.querySelector ? e.querySelector("img") : null;
+
       if(img){
+
         currentCard = document.createElement("div");
         currentCard.className = "section-card";
 
-        // Se tiver data-link no img
-        const link = img.getAttribute("data-link");
-        if(link){
-          const a = document.createElement("a");
-          a.href = link;
-          a.target = "_blank";
-          a.appendChild(img.cloneNode());
-          currentCard.appendChild(a);
+        // Se já estiver dentro de <a>, respeita
+        if(img.parentElement && img.parentElement.tagName === "A"){
+          currentCard.appendChild(img.parentElement);
         } else {
-          currentCard.appendChild(img);
+
+          // aceita data-link OU link
+          const link = img.getAttribute("data-link") || img.getAttribute("link");
+
+          if(link){
+            const a = document.createElement("a");
+            a.href = link;
+            a.target = "_blank";
+            a.rel = "noopener noreferrer";
+
+            a.appendChild(img.cloneNode(true));
+            currentCard.appendChild(a);
+          } else {
+            currentCard.appendChild(img);
+          }
         }
 
         grid.appendChild(currentCard);
         e.remove();
       }
-      // Texto do card
+
       else if(currentCard && e.tagName === "P"){
         currentCard.appendChild(e);
       }
-      // Texto normal da seção
+
       else{
         contentDiv.appendChild(e);
       }

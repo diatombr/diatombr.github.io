@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Rede Brasileira de Diatomólogos</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on Rede Brasileira de Diatomólogos</description>
+    <generator>Hugo</generator>
+    <language>pt-BR</language>
+    <lastBuildDate>Tue, 23 Jun 2020 12:33:45 +1000</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Example Project</title>
+      <link>http://localhost:1313/novidades/example/</link>
+      <pubDate>Tue, 23 Jun 2020 12:33:45 +1000</pubDate>
+      <guid>http://localhost:1313/novidades/example/</guid>
+      <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec accumsan dapibus purus, vel maximus erat facilisis vel. Suspendisse eu ipsum consequat, sodales nulla vel, faucibus velit. Fusce imperdiet lacus nec cursus auctor. In vulputate arcu et nulla placerat, nec pulvinar quam rhoncus. Praesent vel placerat nunc. Mauris elit felis, pulvinar egestas risus ut, fermentum ullamcorper orci. Integer tempor, neque sed fermentum eleifend, ligula est tincidunt purus, sodales semper elit enim ut mi. Vestibulum commodo tristique hendrerit. Duis interdum tristique augue id aliquam. Sed et tellus aliquam, accumsan erat at, facilisis tortor. Donec ac sapien sed lectus ullamcorper ultrices. Nullam placerat mauris nec urna rhoncus, vitae faucibus nulla venenatis. Donec vestibulum justo auctor, vestibulum diam quis, egestas erat. Vivamus volutpat et metus ut fermentum. Donec volutpat neque nec quam lacinia, nec faucibus felis ullamcorper.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Example Project</title>
+      <link>http://localhost:1313/products/example/</link>
+      <pubDate>Tue, 23 Jun 2020 12:33:45 +1000</pubDate>
+      <guid>http://localhost:1313/products/example/</guid>
+      <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec accumsan dapibus purus, vel maximus erat facilisis vel. Suspendisse eu ipsum consequat, sodales nulla vel, faucibus velit. Fusce imperdiet lacus nec cursus auctor. In vulputate arcu et nulla placerat, nec pulvinar quam rhoncus. Praesent vel placerat nunc. Mauris elit felis, pulvinar egestas risus ut, fermentum ullamcorper orci. Integer tempor, neque sed fermentum eleifend, ligula est tincidunt purus, sodales semper elit enim ut mi. Vestibulum commodo tristique hendrerit. Duis interdum tristique augue id aliquam. Sed et tellus aliquam, accumsan erat at, facilisis tortor. Donec ac sapien sed lectus ullamcorper ultrices. Nullam placerat mauris nec urna rhoncus, vitae faucibus nulla venenatis. Donec vestibulum justo auctor, vestibulum diam quis, egestas erat. Vivamus volutpat et metus ut fermentum. Donec volutpat neque nec quam lacinia, nec faucibus felis ullamcorper.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Markdown Syntax Guide</title>
+      <link>http://localhost:1313/blog/markdown-syntax/</link>
+      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/markdown-syntax/</guid>
+      <description>&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Rich Content</title>
+      <link>http://localhost:1313/blog/rich-content/</link>
+      <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/rich-content/</guid>
+      <description>&lt;p&gt;Hugo ships with several &lt;a href=&#34;https://gohugo.io/content-management/shortcodes/#use-hugos-built-in-shortcodes&#34;&gt;Built-in Shortcodes&lt;/a&gt; for rich content, along with a &lt;a href=&#34;https://gohugo.io/about/hugo-and-gdpr/&#34;&gt;Privacy Config&lt;/a&gt; and a set of Simple Shortcodes that enable static and no-JS versions of various social media embeds.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Placeholder Text</title>
+      <link>http://localhost:1313/blog/placeholder-text/</link>
+      <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/placeholder-text/</guid>
+      <description>&lt;p&gt;Lorem est tota propiore conpellat pectoribus de pectora summo.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Math Typesetting</title>
+      <link>http://localhost:1313/blog/math-typesetting/</link>
+      <pubDate>Fri, 08 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/math-typesetting/</guid>
+      <description>&lt;p&gt;Mathematical notation in a Hugo project can be enabled by using third party JavaScript libraries.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Emoji Support</title>
+      <link>http://localhost:1313/blog/emoji-support/</link>
+      <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/emoji-support/</guid>
+      <description>&lt;p&gt;Emoji can be enabled in a Hugo project in a number of ways.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/about/</guid>
+      <description>&lt;h2 id=&#34;oqueehdiatom&#34;&gt;O que são diatomáceas ?&lt;/h2&gt;&#xA;&lt;p&gt;As diatomáceas são microalgas unicelulares que vivem em praticamente todos os ambientes aquáticos do planeta e, ocasionalmente, fora deles. A principal característica do grupo é a presença de uma parede celular rígida de sílica, chamada frústula, que apresenta grande diversidade de formas e padrões ornamentados. Esses organismos microscópicos desempenham papel central nos ecossistemas aquáticos. Contribuem de forma expressiva para a produção de oxigênio, integram a base das cadeias alimentares e respondem rapidamente a variações ambientais, como mudanças na disponibilidade de nutrientes, luz, temperatura e qualidade da água.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/events/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/events/</guid>
+      <description>&lt;h2 id=&#34;proxevent&#34;&gt;Próximos Eventos&lt;/h2&gt;&#xA;&lt;p&gt;Aguarde&amp;hellip;&lt;/p&gt;&#xA;&lt;h2 id=&#34;antevent&#34;&gt;Eventos Anteriores&lt;/h2&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/slide/evento_01.jpg&#34; alt=&#34;Imagem 01&#34;&gt;{link=&amp;ldquo;&lt;a href=&#34;https://www.youtube.com/@ReDiatomBr%22%7D&#34;&gt;https://www.youtube.com/@ReDiatomBr&amp;quot;}&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/teste/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/teste/</guid>
+      <description>&lt;h2 id=&#34;oqueehdiatom&#34;&gt;O que são diatomáceas ?&lt;/h2&gt;&#xA;&lt;p&gt;As diatomáceas são microalgas unicelulares que vivem em praticamente todos os ambientes aquáticos do planeta e, ocasionalmente, fora deles. A principal característica do grupo é a presença de uma parede celular rígida de sílica, chamada frústula, que apresenta grande diversidade de formas e padrões ornamentados. Esses organismos microscópicos desempenham papel central nos ecossistemas aquáticos. Contribuem de forma expressiva para a produção de oxigênio, integram a base das cadeias alimentares e respondem rapidamente a variações ambientais, como mudanças na disponibilidade de nutrientes, luz, temperatura e qualidade da água.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Fale Conosco</title>
+      <link>http://localhost:1313/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/contact/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Seja Sócio</title>
+      <link>http://localhost:1313/associados/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/associados/</guid>
+      <description>&lt;p&gt;Este é o conteúdo principal da minha página. Você pode usar &lt;strong&gt;Markdown&lt;/strong&gt; à vontade aqui:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Design:&lt;/strong&gt; Totalmente responsivo.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Performance:&lt;/strong&gt; Carregamento ultra rápido.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Customização:&lt;/strong&gt; Imagem de fundo via Front Matter.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Escreva o quanto quiser, o layout vai se ajustar automaticamente.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

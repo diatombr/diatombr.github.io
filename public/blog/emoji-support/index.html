@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<meta charset="utf-8">
+<title>Rede Brasileira de Diatomólogos | Emoji Support</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link rel="apple-touch-icon" sizes="180x180" href='/apple-touch-icon.png'>
+<link rel="icon" type="image/png" sizes="32x32" href='/favicon-32x32.png'>
+<link rel="icon" type="image/png" sizes="16x16" href='/favicon-16x16.png'>
+<link rel="manifest" href='/site.webmanifest'>
+
+<link href='/css/fa6.min.css' rel="stylesheet" type="text/css">
+
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+<link href='/css/style.min.css' rel="stylesheet" type="text/css">
+<link rel="stylesheet" href='/css/custom.css'>
+
+<meta property="og:title" content="Rede Brasileira de Diatomólogos | Emoji Support" />
+
+
+
+
+<meta name="description" content="Guide to emoji usage in Hugo">
+<meta property="og:title" content=" | " />
+<meta property="og:site_name" content="Rede Brasileira de Diatomólogos">
+<meta property="og:description" content="Guide to emoji usage in Hugo">
+<meta property="og:url" content="http://localhost:1313/blog/emoji-support/">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@tech_chiba">
+
+<link rel="canonical" href="http://localhost:1313/blog/emoji-support/">
+
+<meta name="twitter:description" content="Guide to emoji usage in Hugo">
+<meta property="article:published_time" content="2019-03-05T00:00:00&#43;00:00">
+<meta property="article:updated_time" content="2019-03-05T00:00:00&#43;00:00">
+
+
+
+
+
+<meta property="og:image" content="http://localhost:1313/">
+
+
+<meta name="twitter:title" content="Emoji Support">
+<link rel="preload" href='/css/sweetalert2.min.css' as="style"
+    onload="this.onload=null;this.rel='stylesheet'">
+
+</head>
+
+<body class="flex flex-col min-h-screen">
+  <main class="flex-grow"><header class="bg-rdb-blue-petroleo">
+  <div id="overlay">
+    <ul class="text-center list-none text-white text-3xl">
+      
+      <li class="p-2">
+        <a href="/about/"><span>Sobre Nós</span></a>
+      </li>
+      
+      <li class="p-2">
+        <a href="/events/"><span>Eventos</span></a>
+      </li>
+      
+      <li class="p-2">
+        <a href="/associados/"><span>Associados</span></a>
+      </li>
+      
+      <li class="p-2">
+        <a href="/contact/"><span>Contato</span></a>
+      </li>
+      
+    </ul>
+  </div>
+
+  <nav class="max-w-7xl mx-auto flex items-center justify-between flex-wrap p-8 relative z-[50]">
+    
+    <div class="flex items-center flex-shrink-0">
+      <a href="/" class="block">
+        <img alt="Diatom Logo" 
+             src="/img/logo/logo_final.svg" 
+             class="h-14 object-contain brightness-0 invert" 
+             style="display: block; max-height: 60px; width: auto;">
+      </a>
+    </div>
+
+    <div class="block lg:hidden">
+      <div id="hamburgerbtn" class="flex cursor-pointer items-center w-14 h-10 py-2 rounded mopen">
+        <span class="top bg-white"></span>
+        <span class="middle bg-white"></span>
+        <span class="bottom bg-white"></span>
+      </div>
+    </div>
+
+    <div class="hidden w-full block flex-grow lg:flex lg:items-center lg:w-auto" id="mobileMenu">
+      <div class="text-lg lg:flex-grow"></div>
+      <div class="text-lg flex">
+        
+          
+            <div class="relative group mt-4 lg:inline-block lg:mt-0 mr-8">
+              <a href="/about/" class="nav-link duration-200 text-white flex items-center cursor-pointer pb-6">
+                Sobre Nós
+                <svg class="ml-2 inline-block arrow-icon" style="width: 15px; height: 15px;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </a>
+              <div class="absolute hidden group-hover:block bg-white shadow-xl rounded-md mt-4 py-2 w-48 z-[9999] border border-gray-100 dropdown-box">
+                
+                <a href="/about/#oqueehdiatom/" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-black">
+                  O que são diatomáceas?
+                </a>
+                
+                <a href="/about/#oqueeh/" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-black">
+                  O que é Diatomologia
+                </a>
+                
+                <a href="/about/#historia/" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-black">
+                  A Rede Brasileira de Diatomólogos
+                </a>
+                
+                <a href="/about/#miss%C3%A3o/" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-black">
+                  Missão, Visão e Valores
+                </a>
+                
+                <a href="/about/#diretoriaatual/" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-black">
+                  Diretoria Atual
+                </a>
+                
+              </div>
+            </div>
+          
+        
+          
+            <div class="relative group mt-4 lg:inline-block lg:mt-0 mr-8">
+              <a href="/events/" class="nav-link duration-200 text-white flex items-center cursor-pointer pb-6">
+                Eventos
+                <svg class="ml-2 inline-block arrow-icon" style="width: 15px; height: 15px;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </a>
+              <div class="absolute hidden group-hover:block bg-white shadow-xl rounded-md mt-4 py-2 w-48 z-[9999] border border-gray-100 dropdown-box">
+                
+                <a href="/events/#proxevent/" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-black">
+                  Próximos Eventos
+                </a>
+                
+                <a href="/events/#antevent/" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-black">
+                  Eventos Anteriores
+                </a>
+                
+              </div>
+            </div>
+          
+        
+          
+            <a href="/associados/" class="nav-link duration-200 block mt-4 lg:inline-block lg:mt-0 text-white mr-8 pb-6">
+              Associados
+            </a>
+          
+        
+          
+            <a href="/contact/" class="nav-link duration-200 block mt-4 lg:inline-block lg:mt-0 text-white mr-8 pb-6">
+              Contato
+            </a>
+          
+        
+      </div>
+    </div>
+  </nav>
+</header>
+
+<style>
+   
+  .nav-link {
+    position: relative;
+    text-decoration: none !important;
+  }
+
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    display: block;
+    background: #ffffff;
+    transition: width 0.3s ease;
+    bottom: 1px;
+    right: 0;
+  }
+
+  .group:hover .nav-link::after,
+  .nav-link:hover::after {
+    width: 100%;
+    left: 0;
+  }
+
+   
+  .group:hover .dropdown-box {
+    display: block !important;
+  }
+
+  .dropdown-box {
+    z-index: 9999 !important;
+  }
+
+  .arrow-icon {
+    transition: transform 0.3s ease;
+  }
+
+  .group:hover .arrow-icon {
+    transform: rotate(180deg);
+  }
+
+   
+  .dropdown-box::before {
+    content: "";
+    position: absolute;
+    top: -30px;
+    left: 0;
+    width: 100%;
+    height: 35px;
+    display: block;
+  }
+</style><div class="scroll-top rounded-full">
+      <span class="icon-keyboard_arrow_up text-2xl"></span>
+    </div>
+<div class="mx-auto my-10 max-w-6xl">
+    <div class="mx-3 col-span-3 lg:col-span-2 px-2">
+        <h1 class="title text-5xl font-bold mb-3">Emoji Support</h1>
+        <section class="mb-4 text-lg">
+            <h4 id="date" class="flex flex-row items-center"><span class="icon-access_time text-2xl mr-2"></span>
+                2019/03/05 </h4>
+            
+            <h4 class="flex flex-row items-center"><span class="icon-person text-2xl mr-2"></span>Hugo Authors
+            </h4>
+            
+            
+        </section>
+        
+        <div class="content prose md:prose-lg lg:prose-xl max-w-none py-1"><p>Emoji can be enabled in a Hugo project in a number of ways.</p>
+<p>The <a href="https://gohugo.io/functions/emojify/"><code>emojify</code></a> function can be called directly in templates or <a href="https://gohugo.io/templates/shortcode-templates/#inline-shortcodes">Inline Shortcodes</a>.</p>
+<p>To enable emoji globally, set <code>enableEmoji</code> to <code>true</code> in your site&rsquo;s <a href="https://gohugo.io/getting-started/configuration/">configuration</a> and then you can type emoji shorthand codes directly in content files; e.g.</p>
+<p><span class="nowrap"><span class="emojify">🙈</span> <code>:see_no_evil:</code></span>  <span class="nowrap"><span class="emojify">🙉</span> <code>:hear_no_evil:</code></span>  <span class="nowrap"><span class="emojify">🙊</span> <code>:speak_no_evil:</code></span></p>
+<br>
+<p>The <a href="http://www.emoji-cheat-sheet.com/">Emoji cheat sheet</a> is a useful reference for emoji shorthand codes.</p>
+<hr>
+<p><strong>N.B.</strong> The above steps enable Unicode Standard emoji characters and sequences in Hugo, however the rendering of these glyphs depends on the browser and the platform. To style the emoji you can either use a third party emoji font or a font stack; e.g.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>.emoji {
+</span></span><span style="display:flex;"><span>  font-family: Apple Color Emoji, Segoe UI Emoji, NotoColorEmoji, Segoe UI Symbol, Android Emoji, EmojiSymbols;
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+
+<style>
+.emojify {
+	font-family: Apple Color Emoji, Segoe UI Emoji, NotoColorEmoji, Segoe UI Symbol, Android Emoji, EmojiSymbols;
+	font-size: 2rem;
+	vertical-align: middle;
+}
+@media screen and (max-width:650px) {
+  .nowrap {
+    display: block;
+    margin: 25px 0;
+  }
+}
+</style></div>
+        <div class="share m-2 grid grid-cols-2 lg:grid-cols-3 gap-2">
+            <a href="https://twitter.com/intent/tweet?url=http%3a%2f%2flocalhost%3a1313%2fblog%2femoji-support%2f&text=Emoji%20Support" target="_blank"
+                title="Post" class="share-button x">
+                <div class="text-white text-center">
+                    <span class="icon-x text-lg mr-2"></span>X
+                </div>
+            </a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fblog%2femoji-support%2f&t=Emoji%20Support" target="_blank"
+                title="Facebook" class="share-button facebook">
+                <div class="text-white text-center">
+                    <span class="icon-facebook text-lg mr-2"></span>Facebook
+                </div>
+            </a>
+            <a href="https://b.hatena.ne.jp/add?mode=confirm&url=http%3a%2f%2flocalhost%3a1313%2fblog%2femoji-support%2f&title=Emoji%20Support" target="_blank"
+                title="hatena" class="share-button hatena">
+                <div class="text-white text-center">
+                    <span class="icon-hatenabookmark text-lg mr-2"></span>Hatena
+                </div>
+            </a>
+            <a href="https://getpocket.com/edit?url=http%3a%2f%2flocalhost%3a1313%2fblog%2femoji-support%2f&title=Emoji%20Support" target="_blank" title="pocket"
+                class="share-button pocket">
+                <div class="text-white text-center">
+                    <span class="icon-get-pocket text-lg mr-2"></span>Pocket
+                </div>
+            </a>
+            <a href="https://timeline.line.me/social-plugin/share?url=http%3a%2f%2flocalhost%3a1313%2fblog%2femoji-support%2f" class="share-button line">
+                <div class="text-white text-center">
+                    <span class="icon-line text-lg mr-2"></span>LINE
+                </div>
+            </a>
+            <a href="javascript:OnClickURL();" class="share-button url" title="Copy to Clipboard"
+                data-clipboard-text="Emoji Support http://localhost:1313/blog/emoji-support/" id="url">
+                <div class="text-white text-center">
+                    <span class="icon-link text-lg mr-2"></span>Copy
+                </div>
+            </a>
+        </div>
+        <hr class="py-4">
+        <aside id="meta">
+            <div class="grid grid-cols-2">
+                <div class="col-span-1">
+                    
+                </div>
+                
+                <a class="next lg:text-2xl" href="http://localhost:1313/blog/math-typesetting/">
+                    <div
+                        class="transition-colors duration-300 col-span-1 border border-gray-600 hover:border-black h-auto m-3 text-center py-3 lg:py-1">
+                        Math… <span class="icon-keyboard_arrow_right"></span>
+                    </div>
+                </a>
+                
+            </div>
+        </aside>
+    </div>
+</div>
+
+  </main><footer class="bg-tlgray-100">
+  
+  <script src='/js/clipboard.min.js'></script>
+  <script src='/js/highlight.min.js'></script>
+  <script src='/js/highlightjs-line-numbers.min.js'></script>
+  <script src='/js/sweetalert2.min.js'></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+    hljs.initLineNumbersOnLoad();
+    new ClipboardJS('.url');
+
+    function OnClickURL() {
+      Swal.fire({
+        icon: 'success',
+        title: 'Copied!',
+        text: 'Copied the URL and title.'
+      })
+    }
+  </script>
+  
+  <script>
+    function toggleNav() {
+      var hamburger = document.getElementById("hamburgerbtn");
+      var overlay = document.getElementById("overlay");
+      var body = document.body;
+
+      hamburger.addEventListener("click", function () {
+        overlay.classList.toggle("open");
+        hamburger.classList.toggle("is-open");
+        body.classList.toggle("scroll-lock");
+      });
+    }
+    toggleNav();
+
+    document.querySelector('.scroll-top').addEventListener('click', () => {
+      document.documentElement.scrollTop = 0;
+    });
+  </script>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap" rel="stylesheet" />
+  
+
+  <div class="copy pl-8 py-5 bg-rdb-blue-petroleo text-white text-md">
+    &copy; Rede Brasileira de Diatomólogos 2026 Todos os Direitos Reservados.
+  </div>
+</footer></body>
+
+</html>

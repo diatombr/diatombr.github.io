@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<meta charset="utf-8">
+<title>Rede Brasileira de Diatomólogos | Math Typesetting</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link rel="apple-touch-icon" sizes="180x180" href='/apple-touch-icon.png'>
+<link rel="icon" type="image/png" sizes="32x32" href='/favicon-32x32.png'>
+<link rel="icon" type="image/png" sizes="16x16" href='/favicon-16x16.png'>
+<link rel="manifest" href='/site.webmanifest'>
+
+<link href='/css/fa6.min.css' rel="stylesheet" type="text/css">
+
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+<link href='/css/style.min.css' rel="stylesheet" type="text/css">
+<link rel="stylesheet" href='/css/custom.css'>
+
+<meta property="og:title" content="Rede Brasileira de Diatomólogos | Math Typesetting" />
+
+
+
+
+<meta name="description" content="A brief guide to setup KaTeX">
+<meta property="og:title" content=" | " />
+<meta property="og:site_name" content="Rede Brasileira de Diatomólogos">
+<meta property="og:description" content="A brief guide to setup KaTeX">
+<meta property="og:url" content="http://localhost:1313/blog/math-typesetting/">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@tech_chiba">
+
+<link rel="canonical" href="http://localhost:1313/blog/math-typesetting/">
+
+<meta name="twitter:description" content="A brief guide to setup KaTeX">
+<meta property="article:published_time" content="2019-03-08T00:00:00&#43;00:00">
+<meta property="article:updated_time" content="2019-03-08T00:00:00&#43;00:00">
+
+
+
+
+
+<meta property="og:image" content="http://localhost:1313/">
+
+
+<meta name="twitter:title" content="Math Typesetting">
+<link rel="preload" href='/css/sweetalert2.min.css' as="style"
+    onload="this.onload=null;this.rel='stylesheet'">
+
+</head>
+
+<body class="flex flex-col min-h-screen">
+  <main class="flex-grow"><header class="bg-rdb-blue-petroleo">
+  <div id="overlay">
+    <ul class="text-center list-none text-white text-3xl">
+      
+      <li class="p-2">
+        <a href="/about/"><span>Sobre Nós</span></a>
+      </li>
+      
+      <li class="p-2">
+        <a href="/events/"><span>Eventos</span></a>
+      </li>
+      
+      <li class="p-2">
+        <a href="/associados/"><span>Associados</span></a>
+      </li>
+      
+      <li class="p-2">
+        <a href="/contact/"><span>Contato</span></a>
+      </li>
+      
+    </ul>
+  </div>
+
+  <nav class="max-w-7xl mx-auto flex items-center justify-between flex-wrap p-8 relative z-[50]">
+    
+    <div class="flex items-center flex-shrink-0">
+      <a href="/" class="block">
+        <img alt="Diatom Logo" 
+             src="/img/logo/logo_final.svg" 
+             class="h-14 object-contain brightness-0 invert" 
+             style="display: block; max-height: 60px; width: auto;">
+      </a>
+    </div>
+
+    <div class="block lg:hidden">
+      <div id="hamburgerbtn" class="flex cursor-pointer items-center w-14 h-10 py-2 rounded mopen">
+        <span class="top bg-white"></span>
+        <span class="middle bg-white"></span>
+        <span class="bottom bg-white"></span>
+      </div>
+    </div>
+
+    <div class="hidden w-full block flex-grow lg:flex lg:items-center lg:w-auto" id="mobileMenu">
+      <div class="text-lg lg:flex-grow"></div>
+      <div class="text-lg flex">
+        
+          
+            <div class="relative group mt-4 lg:inline-block lg:mt-0 mr-8">
+              <a href="/about/" class="nav-link duration-200 text-white flex items-center cursor-pointer pb-6">
+                Sobre Nós
+                <svg class="ml-2 inline-block arrow-icon" style="width: 15px; height: 15px;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </a>
+              <div class="absolute hidden group-hover:block bg-white shadow-xl rounded-md mt-4 py-2 w-48 z-[9999] border border-gray-100 dropdown-box">
+                
+                <a href="/about/#oqueehdiatom/" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-black">
+                  O que são diatomáceas?
+                </a>
+                
+                <a href="/about/#oqueeh/" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-black">
+                  O que é Diatomologia
+                </a>
+                
+                <a href="/about/#historia/" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-black">
+                  A Rede Brasileira de Diatomólogos
+                </a>
+                
+                <a href="/about/#miss%C3%A3o/" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-black">
+                  Missão, Visão e Valores
+                </a>
+                
+                <a href="/about/#diretoriaatual/" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-black">
+                  Diretoria Atual
+                </a>
+                
+              </div>
+            </div>
+          
+        
+          
+            <div class="relative group mt-4 lg:inline-block lg:mt-0 mr-8">
+              <a href="/events/" class="nav-link duration-200 text-white flex items-center cursor-pointer pb-6">
+                Eventos
+                <svg class="ml-2 inline-block arrow-icon" style="width: 15px; height: 15px;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </a>
+              <div class="absolute hidden group-hover:block bg-white shadow-xl rounded-md mt-4 py-2 w-48 z-[9999] border border-gray-100 dropdown-box">
+                
+                <a href="/events/#proxevent/" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-black">
+                  Próximos Eventos
+                </a>
+                
+                <a href="/events/#antevent/" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-black">
+                  Eventos Anteriores
+                </a>
+                
+              </div>
+            </div>
+          
+        
+          
+            <a href="/associados/" class="nav-link duration-200 block mt-4 lg:inline-block lg:mt-0 text-white mr-8 pb-6">
+              Associados
+            </a>
+          
+        
+          
+            <a href="/contact/" class="nav-link duration-200 block mt-4 lg:inline-block lg:mt-0 text-white mr-8 pb-6">
+              Contato
+            </a>
+          
+        
+      </div>
+    </div>
+  </nav>
+</header>
+
+<style>
+   
+  .nav-link {
+    position: relative;
+    text-decoration: none !important;
+  }
+
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    display: block;
+    background: #ffffff;
+    transition: width 0.3s ease;
+    bottom: 1px;
+    right: 0;
+  }
+
+  .group:hover .nav-link::after,
+  .nav-link:hover::after {
+    width: 100%;
+    left: 0;
+  }
+
+   
+  .group:hover .dropdown-box {
+    display: block !important;
+  }
+
+  .dropdown-box {
+    z-index: 9999 !important;
+  }
+
+  .arrow-icon {
+    transition: transform 0.3s ease;
+  }
+
+  .group:hover .arrow-icon {
+    transform: rotate(180deg);
+  }
+
+   
+  .dropdown-box::before {
+    content: "";
+    position: absolute;
+    top: -30px;
+    left: 0;
+    width: 100%;
+    height: 35px;
+    display: block;
+  }
+</style><div class="scroll-top rounded-full">
+      <span class="icon-keyboard_arrow_up text-2xl"></span>
+    </div>
+<div class="mx-auto my-10 max-w-6xl">
+    <div class="mx-3 col-span-3 lg:col-span-2 px-2">
+        <h1 class="title text-5xl font-bold mb-3">Math Typesetting</h1>
+        <section class="mb-4 text-lg">
+            <h4 id="date" class="flex flex-row items-center"><span class="icon-access_time text-2xl mr-2"></span>
+                2019/03/08 </h4>
+            
+            <h4 class="flex flex-row items-center"><span class="icon-person text-2xl mr-2"></span>Hugo Authors
+            </h4>
+            
+            
+        </section>
+        
+        <div class="content prose md:prose-lg lg:prose-xl max-w-none py-1"><p>Mathematical notation in a Hugo project can be enabled by using third party JavaScript libraries.</p>
+<p>In this example we will be using <a href="https://katex.org/">KaTeX</a></p>
+<ul>
+<li>Create a partial under <code>/layouts/partials/math.html</code></li>
+<li>Within this partial reference the <a href="https://katex.org/docs/autorender.html">Auto-render Extension</a> or host these scripts locally.</li>
+<li>Include the partial in your templates like so:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#f92672">{{</span> <span style="color:#66d9ef">if</span> or .Params.math .Site.Params.math <span style="color:#f92672">}}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">{{</span> partial <span style="color:#e6db74">&#34;math.html&#34;</span> . <span style="color:#f92672">}}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">{{</span> end <span style="color:#f92672">}}</span>
+</span></span></code></pre></div><ul>
+<li>To enable KaTex globally set the parameter <code>math</code> to <code>true</code> in a project&rsquo;s configuration</li>
+<li>To enable KaTex on a per page basis include the parameter <code>math: true</code> in content files</li>
+</ul>
+<p><strong>Note:</strong> Use the online reference of <a href="https://katex.org/docs/supported.html">Supported TeX Functions</a></p>
+
+
+<!-- KaTeX -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+
+
+<h3 id="examples">Examples</h3>
+
+<p>
+Inline math: \(\varphi = \dfrac{1+\sqrt5}{2}= 1.6180339887…\)
+</p>
+
+<p>Block math:
+$$
+\varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } }
+$$</p></div>
+        <div class="share m-2 grid grid-cols-2 lg:grid-cols-3 gap-2">
+            <a href="https://twitter.com/intent/tweet?url=http%3a%2f%2flocalhost%3a1313%2fblog%2fmath-typesetting%2f&text=Math%20Typesetting" target="_blank"
+                title="Post" class="share-button x">
+                <div class="text-white text-center">
+                    <span class="icon-x text-lg mr-2"></span>X
+                </div>
+            </a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fblog%2fmath-typesetting%2f&t=Math%20Typesetting" target="_blank"
+                title="Facebook" class="share-button facebook">
+                <div class="text-white text-center">
+                    <span class="icon-facebook text-lg mr-2"></span>Facebook
+                </div>
+            </a>
+            <a href="https://b.hatena.ne.jp/add?mode=confirm&url=http%3a%2f%2flocalhost%3a1313%2fblog%2fmath-typesetting%2f&title=Math%20Typesetting" target="_blank"
+                title="hatena" class="share-button hatena">
+                <div class="text-white text-center">
+                    <span class="icon-hatenabookmark text-lg mr-2"></span>Hatena
+                </div>
+            </a>
+            <a href="https://getpocket.com/edit?url=http%3a%2f%2flocalhost%3a1313%2fblog%2fmath-typesetting%2f&title=Math%20Typesetting" target="_blank" title="pocket"
+                class="share-button pocket">
+                <div class="text-white text-center">
+                    <span class="icon-get-pocket text-lg mr-2"></span>Pocket
+                </div>
+            </a>
+            <a href="https://timeline.line.me/social-plugin/share?url=http%3a%2f%2flocalhost%3a1313%2fblog%2fmath-typesetting%2f" class="share-button line">
+                <div class="text-white text-center">
+                    <span class="icon-line text-lg mr-2"></span>LINE
+                </div>
+            </a>
+            <a href="javascript:OnClickURL();" class="share-button url" title="Copy to Clipboard"
+                data-clipboard-text="Math Typesetting http://localhost:1313/blog/math-typesetting/" id="url">
+                <div class="text-white text-center">
+                    <span class="icon-link text-lg mr-2"></span>Copy
+                </div>
+            </a>
+        </div>
+        <hr class="py-4">
+        <aside id="meta">
+            <div class="grid grid-cols-2">
+                <div class="col-span-1">
+                    
+                    <a class="previous lg:text-2xl" href="http://localhost:1313/blog/emoji-support/">
+                        <div
+                            class="transition-colors duration-300 border border-gray-600 hover:border-black h-auto m-3 text-center py-3 lg:py-1">
+                            <span class="icon-keyboard_arrow_left"></span> Emoji…
+                        </div>
+                    </a>
+                    
+                </div>
+                
+                <a class="next lg:text-2xl" href="http://localhost:1313/blog/placeholder-text/">
+                    <div
+                        class="transition-colors duration-300 col-span-1 border border-gray-600 hover:border-black h-auto m-3 text-center py-3 lg:py-1">
+                        Placeholde… <span class="icon-keyboard_arrow_right"></span>
+                    </div>
+                </a>
+                
+            </div>
+        </aside>
+    </div>
+</div>
+
+  </main><footer class="bg-tlgray-100">
+  
+  <script src='/js/clipboard.min.js'></script>
+  <script src='/js/highlight.min.js'></script>
+  <script src='/js/highlightjs-line-numbers.min.js'></script>
+  <script src='/js/sweetalert2.min.js'></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+    hljs.initLineNumbersOnLoad();
+    new ClipboardJS('.url');
+
+    function OnClickURL() {
+      Swal.fire({
+        icon: 'success',
+        title: 'Copied!',
+        text: 'Copied the URL and title.'
+      })
+    }
+  </script>
+  
+  <script>
+    function toggleNav() {
+      var hamburger = document.getElementById("hamburgerbtn");
+      var overlay = document.getElementById("overlay");
+      var body = document.body;
+
+      hamburger.addEventListener("click", function () {
+        overlay.classList.toggle("open");
+        hamburger.classList.toggle("is-open");
+        body.classList.toggle("scroll-lock");
+      });
+    }
+    toggleNav();
+
+    document.querySelector('.scroll-top').addEventListener('click', () => {
+      document.documentElement.scrollTop = 0;
+    });
+  </script>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap" rel="stylesheet" />
+  
+
+  <div class="copy pl-8 py-5 bg-rdb-blue-petroleo text-white text-md">
+    &copy; Rede Brasileira de Diatomólogos 2026 Todos os Direitos Reservados.
+  </div>
+</footer></body>
+
+</html>
