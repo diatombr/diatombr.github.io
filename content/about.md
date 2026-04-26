@@ -20,7 +20,7 @@ Além disso, suas frústulas se preservam por longos períodos nos sedimentos, p
 
 A diatomologia é a área da ciência dedicada ao estudo das diatomáceas, consolidada a partir do século XIX com o avanço da microscopia. Ao longo do tempo, o campo ampliou seu escopo, integrando abordagens taxonômicas, ecológicas e paleoambientais, com aplicações diretas em biodiversidade, monitoramento ambiental e conservação. No Brasil, a diatomologia se desenvolveu ao longo do século XX e hoje reúne uma comunidade científica ativa e diversa, com atuação em diferentes regiões e contextos ambientais.
 
-![Imagem01](/img/slide/diatom_01.jpg) 
+![Imagem01](/img/slide/diatom_01.jpg)
 
 
 ## A Rede Brasileira de Diatomólogos {#historia}
@@ -50,20 +50,20 @@ Valorizamos a colaboração e a troca de conhecimentos entre os membros, promove
 
 ## Diretoria Atual {#diretoriaatual}
 
-**Coordenador**  
+**Coordenador**
 [Weliton José da Silva](https://lattes.cnpq.br/2544431685311922) – UEL
 
-**Vice-coordenadora**  
+**Vice-coordenadora**
 [Dávia Talgatti](https://lattes.cnpq.br/3712448942978626) – UFOPA
 
-**Secretária**  
+**Secretária**
 [Margaret Seghetto Nardelli](http://lattes.cnpq.br/4832789941894198) – Unioeste
 
-**Suplente de Secretário**  
+**Suplente de Secretário**
 [Elton Augusto Lehmkuhl](https://lattes.cnpq.br/7645106791203098) – UFAM
 
-**Representante Jovem Pesquisador**  
+**Representante Jovem Pesquisador**
 [Maria Gabriela Junqueira](https://lattes.cnpq.br/0240464309673413) – UEG
 
-**Representante Jovem Pesquisador**  
-[Gabriela Vidal]() - ICMBio
+**Representante Jovem Pesquisador**
+[Gabriele Vidal](https://lattes.cnpq.br/9622500469696183) - ICMBio
