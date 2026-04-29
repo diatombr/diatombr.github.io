@@ -14,7 +14,7 @@ As diatomáceas são microalgas unicelulares que vivem em praticamente todos os 
 Além disso, suas frústulas se preservam por longos períodos nos sedimentos, permitindo o uso das diatomáceas como indicadores ambientais do passado e do presente. Por esse motivo, são amplamente empregadas em estudos de biodiversidade, monitoramento ambiental, reconstruções paleoambientais e avaliações de impacto antrópico.
 
 
-![Imagem01](/img/slide/diatom_02.jpg)
+![Imagem01](/img/slide/diatom_03.jpg)
 
 ## O que é Diatomologia ? {#oqueeh}
 
